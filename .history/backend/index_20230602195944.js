@@ -11,14 +11,7 @@ const ellipticCurve = new elliptic.ec("secp256k1");
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "https://symmetric-asymmetric-decryption-and.onrender.com",
-    ],
-  })
-);
+app.use()
 // RSA
 const key = new NodeRSA({ b: 2048 });
 app.post("/encrypt", (req, res) => {
